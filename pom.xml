@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.nuclearw.addquartz</groupId>
-    <artifactId>AddQuartz</artifactId>
+    <groupId>com.nuclearw.addore</groupId>
+    <artifactId>AddOre</artifactId>
     <version>0.1</version>
-    <name>AddQuartz</name>
-    <url>https://github.com/NuclearW/AddQuartz</url>
+    <name>AddOre</name>
+    <url>https://github.com/NuclearW/AddOre</url>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/NuclearW/AddQuartz/issues</url>
+        <url>https://github.com/NuclearW/AddOre/issues</url>
     </issueManagement>
     <build>
-        <finalName>AddQuartz</finalName>
+        <finalName>AddOre</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>

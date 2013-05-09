@@ -1,7 +1,7 @@
-== AddQuartz
+== AddOre
 
-AddQuartz adds quartz ore to nether worlds
+AddOre offers you configuration to put ores wherever you want!
 
 === Compiling
 
-Maven 3 is required to compile AddQuartz
+Maven 3 is required to compile AddOre
