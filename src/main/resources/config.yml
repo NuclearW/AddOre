@@ -1,3 +1,67 @@
-# Add world names that should have quartz added here.  They must be of type NETHER for it to work
-worlds:
-    - world_nether
+#
+#    AddOre Configuration
+#
+#    To spawn ore into a world, you must define a generator config block.
+#    A generator config block has a root name unique to it, and the following options under it:
+#        ore_id
+#        spawns_in_id
+#        gens_per_chunk
+#        max_y
+#        y_modifier
+#        max_x
+#        x_modifier
+#        max_z
+#        z_modifier
+#        deposit_size
+#        worlds
+#
+#    These options in a bit more detail:
+#        ore_id - This is the id of the block of ore you wish to spawn
+#        spawns_in_id - This is the id of the block your ore can spawn in
+#        gens_per_chunk - This is how many attempts will be made at randomly placing this ore in one chunk
+#        max_y - This is the maximum number for a y value to be fed to the random number generator, which will generate a number to be used from 0 (inclusive) to this number (exclusive)
+#        y_modifier - This is a number to be added to the result of the random number generation from max_y
+#            NOTE: This means that if you wanted to make an ore that spawned from 5 to 20, max_y would be 16, and y_modifier would be 5
+#        max_x - This is the maximum number for a x value in a chunk to be fed to the random number generator (see also max_y)
+#        x_modifier - This is a number to be added to the result from the random number generation from max_x
+#        max_z - Same as max_x but for z
+#        z_modifier - Same as x_modifier but for z
+#            NOTE: max_x and max_z are typically 16, x_modifier and z_modifier are typically 0
+#        deposit_size - This is semi-magical value that has to do with how the minecraft server spawns ores, generally larger numbers means a larger deposit
+#            NOTE: You can look at the example configurations that come from the minecraft default ore spawning to get an idea of what to use
+#
+#####
+#
+#    Example configuration to add quartz to a nether world
+#
+#putquartz:
+#    ore_id: 153
+#    spawns_in_id: 87
+#    gens_per_chunk: 16
+#    max_y: 108
+#    y_modifier: 10
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 13
+#    worlds:
+#        - world_nether
+#
+#####
+#
+#    Example configuration to add iron ore to an overworld
+#
+#putiron:
+#    ore_id: 15
+#    spawns_in_id: 1
+#    gens_per_chunk: 20
+#    max_y: 64
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 8
+#    worlds:
+#        - world

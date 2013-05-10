@@ -1,6 +1,6 @@
-name: AddQuartz
-main: com.nuclearw.addquartz.AddQuartz
+name: AddOre
+main: com.nuclearw.addore.AddOre
 version: ${project.version}
 author: NuclearW
-description: AddQuartz adds quartz ore to nether worlds
+description: AddOre offers you configuration to put ores wherever you want!
 load: startup
