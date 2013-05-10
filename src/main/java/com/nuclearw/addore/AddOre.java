@@ -231,11 +231,11 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 			int cz = location.z * 16;
 
 			for(int i = 0; i < gensPerChunk; i++) {
-	            int x = cx + random.nextInt(maxX) + xModifier;
-	            int y = random.nextInt(maxY) + yModifier;
-	            int z = cz + random.nextInt(maxZ) + zModifier;
-	            orePopulator.a(((CraftWorld) getServer().getWorld(location.world)).getHandle(), random, x, y, z);
-	        }
+				int x = cx + random.nextInt(maxX) + xModifier;
+				int y = random.nextInt(maxY) + yModifier;
+				int z = cz + random.nextInt(maxZ) + zModifier;
+				orePopulator.a(((CraftWorld) getServer().getWorld(location.world)).getHandle(), random, x, y, z);
+			}
 		}
 
 		@Override
