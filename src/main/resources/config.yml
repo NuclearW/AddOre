@@ -190,3 +190,23 @@
 #    worlds:
 #        - world
 #
+#####
+#
+#    Example configuration to add gravel to an overworld
+#
+#putgravel:
+#    ore_id: 13
+#    spawns_in_id: 1
+#    gens_per_chunk: 10
+#    max_y: 128
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 32
+#    run_order: 0
+#    worlds:
+#        - world
+#
+#####
