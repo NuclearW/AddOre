@@ -33,6 +33,10 @@
 #        run_order        - This is a value that indicates when this generator should run, compared to others defined here, higher values run before smaller values
 #        worlds           - This is a list of worlds in which this generator will be run
 #
+#    A generator is given an internal id number based off ore_id, spawns_in_id, gens_per_chunk, max_y, y_modifier, max_x, x_modifier, max_z, z_modifier, and deposit_size.
+#    Changing any of these values will cause AddOre to consider this a "new" generator and generate in any specified worlds again, this may cause unwanted behavior.
+#    IT IS HIGHLY SUGGESTED YOU TEST THE ORE GENERATION SETTINGS ON A TEST SERVER, THEN RUN IT ON A PRODUCTION SERVER.
+#
 #####
 #
 #    Example configuration to add quartz to a nether world
