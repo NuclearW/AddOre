@@ -124,7 +124,7 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 			processedCount++;
 		}
 
-		if(processedCount > 10) {
+		if(processedCount > processPerSecond * 5) {
 			saveProcessed();
 			processedCount = 0;
 		}
