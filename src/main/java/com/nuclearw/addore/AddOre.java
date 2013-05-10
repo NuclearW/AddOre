@@ -240,10 +240,9 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 
 		@Override
 		public int compareTo(OreGenerator other) {
-			if(runOrder == other.runOrder) {
-				return 0;
-			} else if(runOrder < other.runOrder) {
-				return -10;
+			// No equality returns here
+			if(runOrder <= other.runOrder) {
+				return -1;
 			} else {
 				return 1;
 			}
