@@ -74,3 +74,22 @@
 #    run_order: 0
 #    worlds:
 #        - world
+#
+#####
+#
+#    Example configuration to add gold ore to an overworld
+#
+#putgold:
+#    ore_id: 14
+#    spawns_in_id: 1
+#    gens_per_chunk: 2
+#    max_y: 32
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 8
+#    run_order: 0
+#    worlds:
+#        - world
