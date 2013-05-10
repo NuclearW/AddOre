@@ -134,6 +134,7 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 			}
 
 			chunksToProcess.add(new ChunkLocation(event.getWorld().getName(), event.getChunk().getX(), event.getChunk().getZ()));
+			break;
 		}
 	}
 
