@@ -34,6 +34,8 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 	private static File processedFile;
 	private static int processedCount = 0;
 
+	private static int processPerSecond = 10;
+
 	protected final Random random = new Random();
 
 	@Override
@@ -46,6 +48,10 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 
 		Set<String> rootKeys = getConfig().getKeys(false);
 		for(String key : rootKeys) {
+			if(key == "speed") {
+				continue;
+			}
+
 			OreGenerator generator = loadGenerator(key);
 			if(generator == null) {
 				continue;
@@ -66,6 +72,8 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 				}
 			}
 		}
+
+		processPerSecond = getConfig().getInt("speed", 10);
 
 		try {
 			Files.touch(processedFile);
@@ -96,7 +104,7 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 		if(chunksToProcess.isEmpty()) return;
 
 		int processed = 0;
-		while(!chunksToProcess.isEmpty() && processed < 10) {
+		while(!chunksToProcess.isEmpty() && processed < processPerSecond) {
 			ChunkLocation location = chunksToProcess.poll();
 
 			Set<OreGenerator> generators = oreGenerators.get(location.world).descendingSet();

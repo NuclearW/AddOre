@@ -1,6 +1,9 @@
 #
 #    AddOre Configuration
 #
+#    The 'speed' option determines the number of chunks to be processed per-second.
+#    Setting this value high will be detrimental to server tps and stability, but will cause the plugin to work and finish faster
+#
 #    To spawn ore into a world, you must define a generator config block.
 #    A generator config block has a root name unique to it, and the following options under it:
 #        ore_id
@@ -210,3 +213,4 @@
 #        - world
 #
 #####
+speed: 10
