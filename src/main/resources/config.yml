@@ -71,7 +71,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 8
-#    run_order: 0
+#    run_order: 70
 #    worlds:
 #        - world
 #
@@ -90,7 +90,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 8
-#    run_order: 0
+#    run_order: 60
 #    worlds:
 #        - world
 #
@@ -109,7 +109,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 16
-#    run_order: 0
+#    run_order: 80
 #    worlds:
 #        - world
 #
@@ -128,7 +128,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 7
-#    run_order: 0
+#    run_order: 30
 #    worlds:
 #        - world
 #
@@ -148,7 +148,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 6
-#    run_order: 0
+#    run_order: 20
 #    worlds:
 #        - world
 #
@@ -167,7 +167,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 7
-#    run_order: 0
+#    run_order: 50
 #    worlds:
 #        - world
 #
@@ -186,7 +186,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 32
-#    run_order: 0
+#    run_order: 100
 #    worlds:
 #        - world
 #
@@ -205,7 +205,7 @@
 #    max_z: 16
 #    z_modifier: 0
 #    deposit_size: 32
-#    run_order: 0
+#    run_order: 90
 #    worlds:
 #        - world
 #
