@@ -131,3 +131,23 @@
 #    run_order: 0
 #    worlds:
 #        - world
+#
+#####
+#
+#    Example configuration to add lapis ore to an overworld
+#    NOTE: Because of a slight variation lapis takes from standard, this is not 100% perfect vanilla emulation
+#
+#putlapis:
+#    ore_id: 21
+#    spawns_in_id: 1
+#    gens_per_chunk: 1
+#    max_y: 32
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 6
+#    run_order: 0
+#    worlds:
+#        - world
