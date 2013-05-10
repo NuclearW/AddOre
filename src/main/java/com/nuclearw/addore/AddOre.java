@@ -171,7 +171,7 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 			}
 		}
 
-		if(!getConfig().contains(key + ".worlds") || !getConfig().isList(key + ".worlds")) {
+		if(!getConfig().contains(key + ".worlds") || !getConfig().isList(key + ".worlds") || getConfig().getList(key + ".worlds") == null) {
 			errors.add(key + ".worlds is not a list that can be read");
 		}
 
