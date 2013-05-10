@@ -112,3 +112,22 @@
 #    run_order: 0
 #    worlds:
 #        - world
+#
+#####
+#
+#    Example configuration to add diamond ore to an overworld
+#
+#putdiamond:
+#    ore_id: 56
+#    spawns_in_id: 1
+#    gens_per_chunk: 1
+#    max_y: 16
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 7
+#    run_order: 0
+#    worlds:
+#        - world
