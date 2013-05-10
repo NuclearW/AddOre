@@ -93,3 +93,22 @@
 #    run_order: 0
 #    worlds:
 #        - world
+#
+#####
+#
+#    Example configuration to add coal ore to an overworld
+#
+#putcoal:
+#    ore_id: 16
+#    spawns_in_id: 1
+#    gens_per_chunk: 20
+#    max_y: 128
+#    y_modifier: 0
+#    max_x: 16
+#    x_modifier: 0
+#    max_z: 16
+#    z_modifier: 0
+#    deposit_size: 16
+#    run_order: 0
+#    worlds:
+#        - world
