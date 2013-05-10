@@ -3,8 +3,10 @@ package com.nuclearw.addore;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
@@ -42,7 +44,28 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 
 		saveDefaultConfig();
 
-		// Load our configs up here
+		Set<String> rootKeys = getConfig().getKeys(false);
+		for(String key : rootKeys) {
+			OreGenerator generator = loadGenerator(key);
+			if(generator == null) {
+				continue;
+			}
+
+			List<String> worlds = getConfig().getStringList(key + ".worlds");
+			for(String world : worlds) {
+				TreeSet<OreGenerator> generators = oreGenerators.get(world);
+				if(generators == null) {
+					generators = new TreeSet<OreGenerator>();
+				}
+
+				generators.add(generator);
+				oreGenerators.put(world, generators);
+
+				if(!processList.contains(world)) {
+					processList.add(world);
+				}
+			}
+		}
 
 		try {
 			Files.touch(processedFile);
@@ -125,6 +148,44 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 			writer.close();
 		} catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	private OreGenerator loadGenerator(String key) {
+		List<String> errors = new ArrayList<String>();
+
+		String[] intKeys = {".ore_id", ".spawns_in_id", ".gens_per_chunk", ".max_y", ".y_modifier", ".max_x", ".x_modifier", ".max_z", ".z_modifier", ".deposit_size", ".run_order"};
+
+		for(String intKey : intKeys) {
+			if(!getConfig().contains(key + intKey) || !getConfig().isInt(key + intKey)) {
+				errors.add(intKey + " not present or not an int in " + key);
+			}
+		}
+
+		if(!getConfig().contains(key + ".worlds") || !getConfig().isList(key + ".worlds")) {
+			errors.add(key + ".worlds is not a list that can be read");
+		}
+
+		List<?> objects = getConfig().getList(key + ".worlds");
+		for(Object object : objects) {
+			if(!(object instanceof String)) {
+				errors.add(key + ".worlds contains a non-string value");
+				break;
+			}
+		}
+
+		if(!errors.isEmpty()) {
+			for(String error : errors) {
+				getLogger().severe(error);
+			}
+			return null;
+		} else {
+			// Generator creating line of death go
+			return new OreGenerator(getConfig().getInt(key + ".ore_id"), getConfig().getInt(key + ".spawns_in_id"), getConfig().getInt(key + ".gens_per_chunk"),
+					getConfig().getInt(key + ".max_y"), getConfig().getInt(key + ".y_modifier"),
+					getConfig().getInt(key + ".max_x"), getConfig().getInt(key + ".x_modifier"),
+					getConfig().getInt(key + ".max_z"), getConfig().getInt(key + ".z_modifier"),
+					getConfig().getInt(key + ".deposit_size"), getConfig().getInt(key + ".run_order"));
 		}
 	}
 
