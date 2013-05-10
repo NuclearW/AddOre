@@ -48,7 +48,7 @@ public class AddOre extends JavaPlugin implements Listener, Runnable {
 
 		Set<String> rootKeys = getConfig().getKeys(false);
 		for(String key : rootKeys) {
-			if(key == "speed") {
+			if(key.equals("speed")) {
 				continue;
 			}
 
